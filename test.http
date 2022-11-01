@@ -1,0 +1,51 @@
+POST http://localhost:8080/login/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "jaethem8",
+    "password": "jaethem8",
+    "role":"ADMIN"
+}
+
+###
+POST http://localhost:8080/login/register HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphZXRoZW04IiwiaWF0IjoxNjY2NzMzNDEyLCJleHAiOjE2NjY4MTk4MTJ9.qO1CGmyFEAvOzJftSoQFTnBhiTVNeMOUbvkK6NQ2Mt8
+content-type: application/json
+
+{
+    "username": "jaethem8eeee",
+    "password": "jaethem8",
+    "role":"ADMIN"
+}
+###
+
+POST http://localhost:8080/login/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "jaethem8",
+    "password": "jaethem8"
+
+}
+
+###
+
+
+POST http://localhost:8080/admin/addPost HTTP/1.1
+content-type: application/json
+
+{
+    "title":"test2",
+    "description":"description",
+    "category":"API",
+    "contents":[
+      {
+        "order":1,
+        "writing":"asdfasdf"
+      }
+    ]
+}
+
+###
+
+GET http://localhost:8080/api/post/test2 HTTP/1.1
